@@ -1,0 +1,40 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Information Of Customer</title>
+</head>
+<body>
+<script>
+    // Task1 Nhập dữ liệu
+    let name=prompt("Enter Name Customer");
+    let idCard=prompt("Enter ID Card Customer ");
+    let birthDay=prompt("Enter birthday Customer");
+    let address=prompt("Enter Address Customer");
+    let typeCustomer=prompt("Enter Type Customer");
+    let discount=prompt("Enter Discount");
+    let rentDays=prompt("Enter rent Accompanning");
+    let typeService=prompt("Enter Type Service");
+    let typeRoom=prompt("Enter Type room");
+
+    // Task2
+    let total=0;
+    if(typeService=="Villa")
+       total=rentDays*500*(100-discount)/100;
+      else if (typeService=="House")
+        total =rentDays*300*(100-discount)/100;
+      else
+        total=rentDays*100*(100-discount)/100;
+    alert("-Name         : " + name  + "\n"+
+        "-ID Card      : " + idCard +"\n" +
+        "-Birthday     : " + birthDay + "\n"+
+        "-Address      : " + address+ "\n"+
+        "-Type Customer: " + typeCustomer+"\n"+
+        "-Discount     : " + discount+ "\n "+
+        "-Acompanning  : " + rentDays+ "\n"+
+        "-Type Service : " + typeService+"\n"+
+        "-Type Room    : " + typeRoom+ "\n" +
+        "-Total pays   : " + total );
+</script>
+</body>
+</html>
