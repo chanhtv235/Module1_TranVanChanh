@@ -7,15 +7,17 @@
 <body>
 <script>
     // Task1 Nhập dữ liệu
-    let name=prompt("Enter Name Customer");
-    let idCard=prompt("Enter ID Card Customer ");
-    let birthDay=prompt("Enter birthday Customer");
-    let address=prompt("Enter Address Customer");
-    let typeCustomer=prompt("Enter Type Customer");
-    let discount=prompt("Enter Discount");
-    let rentDays=prompt("Enter rent Accompanning");
-    let typeService=prompt("Enter Type Service");
-    let typeRoom=prompt("Enter Type room");
+    let name=prompt("1.Enter Name Customer");
+    let idCard=prompt("2.Enter ID Card Customer ");
+    let birthDay=prompt("3.Enter birthday Customer");
+    let email=prompt("4.Enter Email Customer")
+    let address=prompt("5.Enter Address Customer");
+    let typeCustomer=prompt("6.Enter Type Customer");
+    let discount=prompt("7.Enter Discount");
+    let accompanying=prompt("8.Enter Accompanning");
+    let rentDays=prompt("9.Enter rent Day");
+    let typeService=prompt("10.Enter Type Service");
+    let typeRoom=prompt("11.Enter Type room");
 
     // Task2
     let total=0;
@@ -25,16 +27,20 @@
         total =rentDays*300*(100-discount)/100;
       else
         total=rentDays*100*(100-discount)/100;
-    alert("-Name         : " + name  + "\n"+
-        "-ID Card      : " + idCard +"\n" +
-        "-Birthday     : " + birthDay + "\n"+
-        "-Address      : " + address+ "\n"+
-        "-Type Customer: " + typeCustomer+"\n"+
-        "-Discount     : " + discount+ "\n "+
-        "-Acompanning  : " + rentDays+ "\n"+
-        "-Type Service : " + typeService+"\n"+
-        "-Type Room    : " + typeRoom+ "\n" +
-        "-Total pays   : " + total );
+    alert("Info of Custommer\n"+
+        "1.Name         : " + name  + "\n"+
+        "2.ID Card      : " + idCard +"\n" +
+        "3.Birthday     : " + birthDay + "\n"+
+        "4.Email        : " + email+   "\n"+
+        "5.Address       : " + address+ "\n"+
+        "6.Type Customer: " + typeCustomer+"\n"+
+        "7.Discount     : " + discount+ "\n"+
+        "8.Acompanning  : " + accompanying+ "\n"+
+        "9.Renting day  : " + rentDays+ "\n"+
+        "10.Type Service : " + typeService+"\n"+
+        "11.Type Room    : " + typeRoom+ "\n" +
+        "12. Total Pay   : " + total
+        );
 </script>
 </body>
 </html>

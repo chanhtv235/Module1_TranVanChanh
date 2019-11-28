@@ -1,0 +1,46 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Request4</title>
+</head>
+<body>
+    <script>
+            let checkStauts=false;
+        do {
+            let menu = prompt("1.Add New Customer\n" +
+                              "2.Delete Customer");
+            let arrNameCustomers=["chinh","trinh","giang","hanh","độ","quỳnh","bố","mẹ","vọ","con"];
+            //let strNameCustomers="";
+            if (menu==1){
+                let numberCustommer = parseInt(prompt("Enter the number Customer that you want?"));
+                //alert(typeof (arrNameCustomers.length+numberCustommer));
+                let length=arrNameCustomers.length;
+                for (let i=length;i<(length+numberCustommer);i++){
+                    arrNameCustomers[i]=prompt("Enter Custommer Name "+(i+1));
+                }
+               alert(strNameCustomers(arrNameCustomers));
+               arrNameCustomers=arrNameCustomers.sort();
+               alert(strNameCustomers(arrNameCustomers));
+
+            }else if (menu==2){
+                let delNameCustomer=prompt(strNameCustomers(arrNameCustomers));
+                arrNameCustomers.splice((delNameCustomer-1),1);
+                alert(strNameCustomers(arrNameCustomers));
+            } else{
+                alert("failed ")
+            }
+            if (menu!=1&&menu!=2) {
+                checkStauts=true;
+            }
+        }while (checkStauts);
+//////////////////////////////////////////////////////////////////////////////////
+        function strNameCustomers(array) {
+            let nameCustomers="";
+            for (let i=0;i<array.length;i++)
+                nameCustomers +=(i+1)+"."+ array[i]+"\n";
+            return nameCustomers;
+        }
+    </script>
+</body>
+</html>
